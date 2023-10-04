@@ -12,11 +12,12 @@ Flutter плагин для сервиса A/B тестирования от Yan
 ```await Varioqub.init(apiKey:'appmetrica.XXXXXXX');``` - используется для инициализации Varioqub, где XXXXXXX - числовой id AppMetrica проекта
 
 ### Default значения
-```await Varioqub.setDefault(
+```
+await Varioqub.setDefault(
       defaultMap: {
 
       },
-    );
+);
 ```
 используется для назначения default значений на случай если приложение не получило конфигов(разрыв интернет соединения и т.д.)
 

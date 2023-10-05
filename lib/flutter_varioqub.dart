@@ -29,7 +29,7 @@ class Varioqub {
     return await _channel.invokeMethod('get_long', {'long_key': key});
   }
 
-  static Future<double> getId() async {
+  static Future<String> getId() async {
     return await _channel.invokeMethod('get_id');
   }
 

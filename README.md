@@ -1,40 +1,44 @@
 # flutter_varioqub
 
-Flutter плагин для сервиса A/B тестирования от Yandex Metrica - Varioqub
-Аналог Firebase Remote Config
+Flutter plugin for A/B testing service from Yandex Metrica - Varioqub
+Similar to Firebase Remote Config
 
-## Плагин
+## Localization
 
-Плагин основан на [Android/IOS SDK](https://yandex.ru/support2/varioqub-app/ru/) AppMetrica Varioqub и использует функционал SDK
+[Русский](README.ru.md)
 
-Весь функционал описан в example
-### Инициализация
-```await Varioqub.init(apiKey:'appmetrica.XXXXXXX');``` - используется для инициализации Varioqub, где XXXXXXX - числовой id AppMetrica проекта
+## Plugin
 
-### Default значения
+The plugin is based on [Android/IOS SDK](https://yandex.ru/support2/varioqub-app/ru/) AppMetrica Varioqub and uses SDK functionality
+
+All functionality is described in example
+### Initialization
+```await Varioqub.init(apiKey:'appmetrica.XXXXXXX');``` - used to initialize Varioqub, where XXXXXXX is the numeric id of the AppMetrica project
+
+### Default values
 ```await Varioqub.setDefault(
-      defaultMap: {
+       defaultMap: {
 
-      },
-    );
+       },
+     );
 ```
-используется для назначения default значений на случай если приложение не получило конфигов(разрыв интернет соединения и т.д.)
+used to assign default values in case the application has not received configs (internet connection disconnected, etc.)
 
-### Получение конфигов
-```await Varioqub.fetchConfig();``` - используется для получения конфигов
+### Getting configs
+```await Varioqub.fetchConfig();``` - used to get configs
 
-### Активация конфигов
+### Activating configs
 ```await Varioqub.activateConfig();```
 
-### Получение конфигов
-```Varioqub.getString('key':'');``` - получение строкового значения
+### Getting configs
+```Varioqub.getString('key':'');``` - getting a string value
 
-```Varioqub.getBool('key':'');``` - получение булева значения
+```Varioqub.getBool('key':'');``` - getting a Boolean value
 
-```Varioqub.getDouble('key':'');``` - получение значения вещественного типа
+```Varioqub.getDouble('key':'');``` - getting a value of a real type
 
-```Varioqub.getLong('key':'');``` - получение целочисленного значения
+```Varioqub.getLong('key':'');``` - getting an integer value
 
-## Проблемы
+## Problems
 
-Мы не учли аналитику в текущем состоянии плагина - адаптеры нулевые, будем рады вашей поддержке проекта
+We did not take into account analytics in the current state of the plugin - the adapters are zero, we will be glad to see your support for the project

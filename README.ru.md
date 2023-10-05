@@ -5,7 +5,7 @@ Flutter плагин для сервиса A/B тестирования от Yan
 
 ## Локализация
 
-[English](README.md)
+[English](https://github.com/smenateam/flutter_varioqub/blob/master/README.md)
 
 ## Плагин
 

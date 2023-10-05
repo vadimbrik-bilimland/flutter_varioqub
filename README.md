@@ -5,7 +5,7 @@ Similar to Firebase Remote Config
 
 ## Localization
 
-[Русский](README.ru.md)
+[Русский](https://github.com/smenateam/flutter_varioqub/blob/master/README.ru.md)
 
 ## Plugin
 

@@ -1,3 +1,7 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+Init of project
+
+# 0.0.2
+
+Localization README.md

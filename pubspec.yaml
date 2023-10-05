@@ -1,6 +1,6 @@
 name: flutter_varioqub
 description: Flutter plugin for service A/B testing from Yandex Metrica - Varioqub
-version: 0.0.1
+version: 0.0.2
 homepage: https://yandex.ru/support2/varioqub-app/ru/
 
 environment:

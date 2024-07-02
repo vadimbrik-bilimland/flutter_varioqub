@@ -3,8 +3,6 @@ package com.smena.flutter_varioqub
 import android.app.Application
 import android.content.Context
 import androidx.annotation.NonNull
-import com.yandex.metrica.YandexMetrica
-import com.yandex.metrica.YandexMetricaConfig
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
@@ -32,11 +30,11 @@ class FlutterVarioqubPlugin : FlutterPlugin, MethodCallHandler {
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         when (call.method) {
             "init" -> {
-                val apiKey = call.argument<String?>("api_key")
-                if (apiKey == null) {
-                    result.error("API key = null", null, null)
+                val clientId = call.argument<String?>("client_id")
+                if (clientId == null) {
+                    result.error("Client id (appmetrica.XXXXXXX) = null", null, null)
                 }
-                val settings = VarioqubSettings.Builder(apiKey!!).withThrottleInterval(100)
+                val settings = VarioqubSettings.Builder(clientId!!).withThrottleInterval(100)
                     .build()
 
                 Varioqub.init(settings, AppmetricaAdapter(context!!), context!!)

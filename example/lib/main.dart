@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> init() async {
-    await Varioqub.init(apiKey: 'appmetrica.XXXXXXX'); // XXXXXXX - App ID Yandex Metrica
+    await Varioqub.init(clientId: 'appmetrica.XXXXXXX'); // XXXXXXX - App ID Yandex Metrica
     await Varioqub.setDefault(
       defaultMap: {
         'test_string': 'default_string',

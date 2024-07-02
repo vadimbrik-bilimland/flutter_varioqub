@@ -16,9 +16,9 @@ public class FlutterVarioqubPlugin: NSObject, FlutterPlugin {
     let arguments = call.arguments as? NSDictionary
     switch call.method {
     case "init":
-        guard let apiKey = arguments?["api_key"] as? String else {
+        guard let clientId = arguments?["client_id"] as? String else {
                         result(
-                            FlutterError(code: "API key = null",
+                            FlutterError(code: "Client id (appmetrica.XXXXXXX) = null",
                                 message: nil,
                                 details: nil))
                         return
@@ -26,7 +26,7 @@ public class FlutterVarioqubPlugin: NSObject, FlutterPlugin {
         var vqCfg = VarioqubConfig.default
 
 
-        VarioqubFacade.shared.initialize(apiKey: apiKey, config: vqCfg, idProvider: nil, reporter: nil)
+        VarioqubFacade.shared.initialize(clientId: clientId, config: vqCfg, idProvider: nil, reporter: nil)
         
         result(nil)
     case "set_default":

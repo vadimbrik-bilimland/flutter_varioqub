@@ -13,7 +13,7 @@ Flutter плагин для сервиса A/B тестирования от Yan
 
 Весь функционал описан в example
 ### Инициализация
-```await Varioqub.init(apiKey:'appmetrica.XXXXXXX');``` - используется для инициализации Varioqub, где XXXXXXX - числовой id AppMetrica проекта
+```await Varioqub.init(clientId:'appmetrica.XXXXXXX');``` - используется для инициализации Varioqub, где XXXXXXX - числовой id AppMetrica проекта
 
 ### Default значения
 ```await Varioqub.setDefault(

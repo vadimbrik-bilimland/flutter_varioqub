@@ -13,7 +13,7 @@ The plugin is based on [Android/IOS SDK](https://yandex.ru/support2/varioqub-app
 
 All functionality is described in example
 ### Initialization
-```await Varioqub.init(apiKey:'appmetrica.XXXXXXX');``` - used to initialize Varioqub, where XXXXXXX is the numeric id of the AppMetrica project
+```await Varioqub.init(clientId:'appmetrica.XXXXXXX');``` - used to initialize Varioqub, where XXXXXXX is the numeric id of the AppMetrica project
 
 ### Default values
 ```await Varioqub.setDefault(

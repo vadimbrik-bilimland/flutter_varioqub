@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 class Varioqub {
   static const MethodChannel _channel = MethodChannel('flutter_varioqub');
 
-  static Future<void> init({required String apiKey}) async {
-    return await _channel.invokeMethod<void>('init', {'api_key': apiKey});
+  static Future<void> init({required String clientId}) async {
+    return await _channel.invokeMethod<void>('init', {'client_id': clientId});
   }
 
   static Future<void> setDefault(

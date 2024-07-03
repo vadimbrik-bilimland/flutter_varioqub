@@ -11,7 +11,7 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import com.yandex.varioqub.appmetricaadapter.AppmetricaAdapter
+import com.yandex.varioqub.appmetricaadapter.AppMetricaAdapter
 import com.yandex.varioqub.config.FetchError
 import com.yandex.varioqub.config.OnFetchCompleteListener
 import com.yandex.varioqub.config.Varioqub
@@ -39,7 +39,7 @@ class FlutterVarioqubPlugin : FlutterPlugin, MethodCallHandler {
                 val settings = VarioqubSettings.Builder(apiKey!!).withThrottleInterval(100)
                     .build()
 
-                Varioqub.init(settings, AppmetricaAdapter(context!!), context!!)
+                Varioqub.init(settings, AppMetricaAdapter(context!!), context!!)
                 result.success(null)
             }
 
